@@ -14,18 +14,4 @@ jobs:
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "hello world1"
-          sleep 5s
-          echo "hello world2"
-          sleep 1m
           echo "hello world3"
-          sleep 1m
-          echo "hello world4"
-          sleep 1m
-          echo "hello world5"
-          sleep 1m
-          echo "hello world6"
-          sleep 1m
-          echo "hello world7"
-          sleep 1m
-          echo "hello world8"
