@@ -16,8 +16,8 @@ jobs:
         run: |
           echo "hello world1"
           sleep 5s
-          echo "hello world2"
-          sleep 1m
+          echo "hello world2 for bug branch"
+          sleep 5s
           echo "hello world3"
           sleep 1m
           echo "hello world4"
