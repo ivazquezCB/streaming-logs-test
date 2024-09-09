@@ -1,12 +1,10 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: My workflow
-
 on:
   push:
     branches:
-      - '**'
-
+      - "**"
 jobs:
   build:
     steps:
@@ -29,3 +27,17 @@ jobs:
           echo "hello world7"
           sleep 1m
           echo "hello world8"
+  Random-Approval:
+    delegates: cloudbees-io/manual-approval/custom-job.yml@v1
+    with:
+      approvers:
+        - 85d23c34-a472-11ec-916b-42010a83ae13
+        - 7f5b8e40-03d4-11eb-9d67-42010a83ae35
+        - 89e7c0a9-6d12-4b7d-5a17-60d473992486
+      instruction: |-
+        Seeing if multiline
+
+        instructions
+
+        work
+      disallowLaunchByUser: true
